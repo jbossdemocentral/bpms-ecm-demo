@@ -10,9 +10,8 @@ SERVER_BIN=$JBOSS_HOME/bin
 SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
-EAP=jboss-eap-6.1.1.zip
 BPMS=jboss-bpms-installer-6.0.2.GA-redhat-5.jar
-VERSION=6.0.2.GA
+VERSION=6.0.2
 
 # wipe screen.
 clear 
@@ -61,7 +60,7 @@ if [ -x $JBOSS_HOME ]; then
 		mv $JBOSS_HOME $JBOSS_HOME.OLD
 fi
 
-# Run SRAMP + EAP installer.
+# Run installer.
 echo Product installer running now...
 echo
 java -jar $SRC_DIR/$BPMS $SUPPORT_DIR/installation-bpms -variablefile $SUPPORT_DIR/installation-bpms.variables
