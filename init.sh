@@ -101,9 +101,11 @@ echo "  - making sure standalone.sh for server is executable..."
 echo
 chmod u+x $JBOSS_HOME/bin/standalone.sh
 
-echo "You can now start the $PRODUCT with $SERVER_BIN/standalone.sh"
+echo "Staring the $PRODUCT with $SERVER_BIN/standalone.sh"
 echo
+$SERVER_BIN/standalone.sh
 
+echo
 echo "$PRODUCT $VERSION $DEMO Setup Complete."
 echo
 
