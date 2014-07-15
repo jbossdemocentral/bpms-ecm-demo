@@ -1,7 +1,7 @@
-JBoss BPM Suite Install Demo 
-=============================
+JBoss BPM Suite Document Integration Demo 
+=========================================
 
-Project to automate the installation of this product without preconfiguration beyond a single admin user.
+Project to automate the installation of this product with ECM (document integration with BPM) demo project.
 
 Quickstart
 ----------
