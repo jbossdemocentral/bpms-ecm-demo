@@ -66,7 +66,8 @@ echo Product installer running now...
 echo
 java -jar $SRC_DIR/$BPMS $SUPPORT_DIR/installation-bpms -variablefile $SUPPORT_DIR/installation-bpms.variables
 
-echo "  - setting up standalone.xml configuration adjustments..."
+echo
+echo " - setting up standalone.xml configuration adjustments..."
 echo
 cp $SUPPORT_DIR/standalone.xml $SERVER_CONF
 
@@ -78,11 +79,11 @@ chmod u+x $JBOSS_HOME/bin/standalone.sh
 echo
 echo "$PRODUCT $VERSION $DEMO setup complete."
 echo
-echo "Now going to start the server, you can open business central in browser at:"
+echo "  - now going to start the server, you can open business central in browser at:"
 echo
-echo "    http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)"
+echo "       http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)"
 echo
-echo "or you can start the $PRODUT anytime with $SERVER_BIN/standalone.sh"
+echo "  - you can start the $PRODUT anytime with $SERVER_BIN/standalone.sh"
 echo
 $SERVER_BIN/standalone.sh
 
