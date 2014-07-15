@@ -10,11 +10,11 @@ Quickstart
 
 2. Add product installer to installs directory.
 
-3. Run 'init.sh' or 'init.bat' file.
+3. Run 'init.sh' or 'init.bat' file, product will auto start.
 
 4. Login to http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)
 
-5. Enjoy installed and configured JBoss BPM Suite.
+5. Enjoy the BPM demo with document integration.
 
 
 Supporting Articles
