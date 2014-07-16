@@ -75,15 +75,23 @@ echo "  - making sure standalone.sh for server is executable..."
 echo
 chmod u+x $JBOSS_HOME/bin/standalone.sh
 
+# build custom extension for ECM demo.
+mvn package -f $PRJ_DIR/brms-file-upload-cmis/pom.xml
+
+echo
+echo " - adding libs needed for CMIS interaction and file-uplaoding to business central..."
+echo
+cp $SUPPORT_DIR/libs/* $SERVER_DIR/business-central.war/WEB_INF/lib
+cp $PRJ_DIR/brms-file-upload-cmis/target/brms-file-upload-cmis-1.0.0.jar $SERVER_DIR/business-central.war/WEB_INF/lib
+
+echo
+echo "Start the $PRODUT with:"
+echo
+echo "    $SERVER_BIN/standalone.sh"
+echo
+echo "Login to business central in browser at:"
+echo
+echo "    http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)"
 echo
 echo "$PRODUCT $VERSION $DEMO setup complete."
-echo
-echo "  - now going to start the server, you can open business central in browser at:"
-echo
-echo "       http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)"
-echo
-echo "  - you can start the $PRODUT anytime with $SERVER_BIN/standalone.sh"
-echo
-$SERVER_BIN/standalone.sh
-
 
