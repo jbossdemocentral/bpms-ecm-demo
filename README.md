@@ -1,7 +1,9 @@
 JBoss BPM Suite Document Integration Demo 
 =========================================
 
-Project to automate the installation of this product with ECM (document integration with BPM) demo project.
+Project to automate the installation of this product with ECM (document integration with BPM) demo project. Demo is a telco story of
+customer working with process to activate her mobile service by downloading a service contract document, signing it (update), and
+uploading the results back into the process.
 
 Quickstart
 ----------
