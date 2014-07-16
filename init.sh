@@ -65,6 +65,10 @@ echo Product installer running now...
 echo
 java -jar $SRC_DIR/$BPMS $SUPPORT_DIR/installation-bpms -variablefile $SUPPORT_DIR/installation-bpms.variables
 
+echo "  - setting up demo projects..."
+echo
+cp -r $SUPPORT_DIR/bpm-suite-demo-niogit $SERVER_BIN/.niogit
+
 echo
 echo " - setting up user roles with application-roles.properties ..."
 echo

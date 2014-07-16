@@ -70,6 +70,12 @@ echo Product installer running now...
 echo.
 java -jar %SRC_DIR%/%BPMS% %SUPPORT_DIR%\installation-bpms -variablefile %SUPPORT_DIR%\installation-bpms.variables
 
+echo - setting up demo projects...
+echo.
+
+mkdir "%SERVER_BIN%\.niogit\"
+xcopy /Y /Q /S "%SUPPORT_DIR%\bpm-suite-demo-niogit\*" "%SERVER_BIN%\.niogit\"
+
 echo - setting up standalone.xml configuration adjustments...
 echo.
 xcopy /Y /Q "%SUPPORT_DIR%\standalone.xml" "%SERVER_CONF%"
