@@ -66,6 +66,11 @@ echo
 java -jar $SRC_DIR/$BPMS $SUPPORT_DIR/installation-bpms -variablefile $SUPPORT_DIR/installation-bpms.variables
 
 echo
+echo " - setting up user roles with application-roles.properties ..."
+echo
+cp $SUPPORT_DIR/application-roles.properties $SERVER_CONF
+
+echo
 echo " - setting up standalone.xml configuration adjustments..."
 echo
 cp $SUPPORT_DIR/standalone.xml $SERVER_CONF
@@ -80,16 +85,25 @@ mvn package -f $PRJ_DIR/brms-file-upload-cmis/pom.xml
 
 echo
 echo " - adding libs needed for CMIS interaction and file-uplaoding to business central..."
-echo
 cp $SUPPORT_DIR/libs/*.jar $SERVER_DIR/business-central.war/WEB-INF/lib
 cp $PRJ_DIR/brms-file-upload-cmis/target/brms-file-upload-cmis-1.0.0.jar $SERVER_DIR/business-central.war/WEB-INF/lib
 
 echo
-echo "Start the $PRODUT with:"
+echo "Start $PRODUCT in one of two ways depending on usage:"
 echo
-echo "    $SERVER_BIN/standalone.sh"
+echo "   1. Document stored on local filesystem in /tmp/{timestamp-directories}/mobile-serivce-agreement.txt"
 echo
-echo "Login to business central in browser at:"
+echo "               $ $SERVER_BIN/standalone.sh"
+echo
+echo "   2. Document is uploaded to and from Alfresco online CMIS service, start with a property:"
+echo
+echo "               $ $SERVER_BIN/standalone.sh -Dorg.jbpm.ecm.storage.type=opencmis"
+echo
+echo "The uploaded documents will be available in browser:"
+echo
+echo "               http://tinyurl.com/cmis-demo  (login: admin/admin)"
+echo
+echo "Login into business central at:"
 echo
 echo "    http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)"
 echo

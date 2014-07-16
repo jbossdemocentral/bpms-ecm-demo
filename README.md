@@ -6,7 +6,7 @@ Project to automate the installation of this product with ECM (document integrat
 Quickstart
 ----------
 
-1. [Download and unzip.]()
+1. [Download and unzip.](https://github.com/eschabell/bpms-ecm-demo/archive/master.zip)
 
 2. Add product installer to installs directory.
 
@@ -17,10 +17,22 @@ Quickstart
 5. Enjoy the BPM demo with document integration.
 
 
+Running demo
+------------
+Two options to start BPM Suite server:
+
+   1. Document management on local filesystem, found in /tmp/{timestamp-directories}/mobile-service-agreement.txt
+
+   2. Document management via remote ECM system interface based on open standard CMIS through a [hosted Alfresco service](http://tinyurl.com/cmis-demo),
+      login: admin/admin and you can see the document uploaded, view contents, and remember to remove it when done.
+
+Sample mobile service agreement (unsigned) is located in support/mobile-service-agreement.txt, use this as initial upload document, 
+then download and sign by adding your name, save it locally, and then upload it via the task form.
+
+
 Supporting Articles
 -------------------
-
-[Red Hat JBoss BPM Suite - all product demos updated for version 6.0.2.GA release](http://www.schabell.org/2014/07/redhat-jboss-bpmsuite-product-demos-6.0.2-updated.html)
+None yet.
 
 
 Released versions
