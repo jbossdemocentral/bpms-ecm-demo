@@ -42,6 +42,6 @@ Released versions
 
 See the tagged releases for the following versions of the product:
 
-- v1.3 - JBoss BPM Suite 6.0.2 installer used, with supporting document integration installed. 
+- v0.1 - JBoss BPM Suite 6.0.2 installer used, with supporting document integration installed. 
 
 ![Process](https://github.com/eschabell/bpms-ecm-demo/blob/master/support/mobile-activation-process.png?raw=true)
