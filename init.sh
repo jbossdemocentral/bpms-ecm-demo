@@ -4,7 +4,7 @@ AUTHORS="Maciej Swiderski, Eric D. Schabell"
 PROJECT="git@github.com:eschabell/bpms-install-demo.git"
 PRODUCT="JBoss BPM Suite"
 JBOSS_HOME=./target/jboss-eap-6.1
-SERVER_DIR=$JBOSS_HOME/standalone/deployments/
+SERVER_DIR=$JBOSS_HOME/standalone/deployments
 SERVER_CONF=$JBOSS_HOME/standalone/configuration/
 SERVER_BIN=$JBOSS_HOME/bin
 SRC_DIR=./installs
@@ -81,8 +81,8 @@ mvn package -f $PRJ_DIR/brms-file-upload-cmis/pom.xml
 echo
 echo " - adding libs needed for CMIS interaction and file-uplaoding to business central..."
 echo
-cp $SUPPORT_DIR/libs/* $SERVER_DIR/business-central.war/WEB_INF/lib
-cp $PRJ_DIR/brms-file-upload-cmis/target/brms-file-upload-cmis-1.0.0.jar $SERVER_DIR/business-central.war/WEB_INF/lib
+cp $SUPPORT_DIR/libs/*.jar $SERVER_DIR/business-central.war/WEB-INF/lib
+cp $PRJ_DIR/brms-file-upload-cmis/target/brms-file-upload-cmis-1.0.0.jar $SERVER_DIR/business-central.war/WEB-INF/lib
 
 echo
 echo "Start the $PRODUT with:"
