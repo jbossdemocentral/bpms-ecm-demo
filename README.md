@@ -12,12 +12,31 @@ Quickstart
 
 2. Add product installer to installs directory.
 
-3. Run 'init.sh' or 'init.bat' file, product will auto start.
+3. Run 'init.sh' or 'init.bat' file to install demo.
 
-4. Login to http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)
+4. You have two options to run demo, using filesystem for document storage or CMIS interface over network:
 
-5. Enjoy the BPM demo with document integration.
+   ```
+   $ ./target/jboss-eap-6.1/bin/standalone.sh
+  
+   or 
 
+   $ ./target/jboss-eap-6.1/bin/standalone.sh -Dorg.jbpm.ecm.storage.type=opencmis
+   ```
+
+5. Login to http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)
+
+   ```
+   - build & deploy mobile service activation process
+
+   - start process, submit provided service agreement document from suport/mobile-service-agreement.txt
+
+   - at user task, form presented that allows user to download service agreement, edit & sign agreement, upload signed document to
+     complet task.
+
+   - view document stored either on filesystem (/tmp/{date-time-stamp-dir}/mobile-service-agreement.txt) or on CMIS online storage
+     at http://tinyurl.com/cmis-demo  (login: admin/admin)
+   ```
 
 Running demo
 ------------
