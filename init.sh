@@ -52,12 +52,9 @@ fi
 
 # Move the old JBoss instance, if it exists, to the OLD position.
 if [ -x $JBOSS_HOME ]; then
-		echo "  - existing JBoss product install detected..."
+		echo "  - existing JBoss product install detected and removed..."
 		echo
-		echo "  - moving existing JBoss product install aside..."
-		echo
-		rm -rf $JBOSS_HOME.OLD
-		mv $JBOSS_HOME $JBOSS_HOME.OLD
+		rm -rf ./target
 fi
 
 # Run installer.

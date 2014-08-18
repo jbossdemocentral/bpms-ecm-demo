@@ -53,7 +53,7 @@ then download and sign by adding your name, save it locally, and then upload it 
 
 Supporting Articles
 -------------------
-None yet.
+[Lightning brings Red Hat JBoss BPM Suite ECM telco CMIS integration demo](http://www.schabell.org/2014/07/lightning-strike-brings-redhat-jboss-bpmsuite-ecm-cmis-demo.html)
 
 
 Released versions
