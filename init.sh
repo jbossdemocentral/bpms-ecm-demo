@@ -3,15 +3,15 @@ DEMO="JBoss BPM Suite ECM Integration Demo"
 AUTHORS="Maciej Swiderski, Eric D. Schabell"
 PROJECT="git@github.com:eschabell/bpms-install-demo.git"
 PRODUCT="JBoss BPM Suite"
-JBOSS_HOME=./target/jboss-eap-6.1
+JBOSS_HOME=./target/jboss-eap-6.3
 SERVER_DIR=$JBOSS_HOME/standalone/deployments
 SERVER_CONF=$JBOSS_HOME/standalone/configuration/
 SERVER_BIN=$JBOSS_HOME/bin
 SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
-BPMS=jboss-bpms-installer-6.0.3.GA-redhat-1.jar
-VERSION=6.0.3
+BPMS=jboss-bpmsuite-installer-6.1.0.ER2.jar
+VERSION=6.1.ER2
 
 # wipe screen.
 clear 
@@ -86,7 +86,6 @@ mvn package -f $PRJ_DIR/brms-file-upload-cmis/pom.xml
 
 echo
 echo " - adding libs needed for CMIS interaction and file-uplaoding to business central..."
-cp $SUPPORT_DIR/libs/*.jar $SERVER_DIR/business-central.war/WEB-INF/lib
 cp $PRJ_DIR/brms-file-upload-cmis/target/brms-file-upload-cmis-1.0.0.jar $SERVER_DIR/business-central.war/WEB-INF/lib
 
 echo
