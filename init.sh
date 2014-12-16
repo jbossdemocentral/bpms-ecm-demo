@@ -62,6 +62,11 @@ echo Product installer running now...
 echo
 java -jar $SRC_DIR/$BPMS $SUPPORT_DIR/installation-bpms -variablefile $SUPPORT_DIR/installation-bpms.variables
 
+if [ $? -ne 0 ]; then
+	echo Error occurred during $PRODUCT installation!
+	exit
+fi
+
 echo "  - setting up demo projects..."
 echo
 cp -r $SUPPORT_DIR/bpm-suite-demo-niogit $SERVER_BIN/.niogit
