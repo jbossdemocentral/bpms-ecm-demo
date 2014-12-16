@@ -12,7 +12,7 @@ Quickstart
 
 2. Add product installer to installs directory.
 
-3. Run 'init.sh' or 'init.bat' file to install demo.
+3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges.
 
 4. You have two options to run demo, using filesystem for document storage or CMIS interface over network:
 
