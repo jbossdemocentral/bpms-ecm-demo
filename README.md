@@ -38,6 +38,44 @@ Quickstart
      at http://tinyurl.com/cmis-demo  (login: admin/admin)
    ```
 
+Docker
+-------------------------
+
+The following steps can be used to configure and run the demo in a docker container
+
+1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-ecm-demo/archive/master.zip)
+
+2. Add product installer to installs directory.
+
+3. Build demo image
+
+	```
+	docker build -t jbossdemocentral/bpms-ecm-demo .
+	```
+4. You have two options to run demo, using filesystem for document storage or CMIS interface over network:
+    
+    ```
+	docker run --it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo
+    ```
+    or
+      
+    ```
+	docker run --it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo -Dorg.jbpm.ecm.storage.type=opencmis
+    ```
+5. Login to http://<DOCKER_HOST>:8080/business-central  (u:erics / p:bpmsuite1!)
+
+    ```
+   - build & deploy mobile service activation process
+
+   - start process, submit provided service agreement document from suport/mobile-service-agreement.txt
+
+   - at user task, form presented that allows user to download service agreement, edit & sign agreement, upload signed document to
+     complet task.
+
+   - view document stored either on filesystem in docker container using terminal used to launch container (/tmp/{date-time-stamp-dir}/mobile-service-agreement.txt) or on CMIS online storage
+     at http://tinyurl.com/cmis-demo  (login: admin/admin)
+     ```
+
 Running demo
 ------------
 Two options to start BPM Suite server:
