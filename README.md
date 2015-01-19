@@ -38,8 +38,8 @@ Quickstart
      at http://tinyurl.com/cmis-demo  (login: admin/admin)
    ```
 
-Docker
--------------------------
+Optional Docker Install
+-----------------------
 
 The following steps can be used to configure and run the demo in a docker container
 
@@ -47,12 +47,14 @@ The following steps can be used to configure and run the demo in a docker contai
 
 2. Add product installer to installs directory.
 
-3. Build demo image
+3. Copy contents of support/docker directory to the project root.
+
+4. Build demo image
 
 	```
 	docker build -t jbossdemocentral/bpms-ecm-demo .
 	```
-4. You have two options to run demo, using filesystem for document storage or CMIS interface over network:
+5. You have two options to run demo, using filesystem for document storage or CMIS interface over network:
     
     ```
 	docker run --it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo
@@ -62,7 +64,7 @@ The following steps can be used to configure and run the demo in a docker contai
     ```
 	docker run --it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo -Dorg.jbpm.ecm.storage.type=opencmis
     ```
-5. Login to http://<DOCKER_HOST>:8080/business-central  (u:erics / p:bpmsuite1!)
+6. Login to http://<DOCKER_HOST>:8080/business-central  (u:erics / p:bpmsuite1!)
 
     ```
    - build & deploy mobile service activation process
@@ -98,6 +100,8 @@ Released versions
 -----------------
 
 See the tagged releases for the following versions of the product:
+
+- v0.4 - JBoss BPM Suite 6.0.3 with optional docker installation.
 
 - v0.3 - moved to JBoss Demo Central, with updated windows init.bat support.
 
