@@ -1,13 +1,14 @@
 JBoss BPM Suite Document Integration Demo 
 =========================================
-
 Project to automate the installation of this product with ECM (document integration with BPM) demo project. Demo is a telco story of
 customer working with process to activate her mobile service by downloading a service contract document, signing it (update), and
 uploading the results back into the process.
 
-Quickstart
-----------
+There are two options available to you for using this demo; local and Docker.
 
+
+Option 1 - Install on your machine
+----------------------------------
 1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-ecm-demo/archive/master.zip)
 
 2. Add product installer to installs directory.
@@ -38,9 +39,9 @@ Quickstart
      at http://tinyurl.com/cmis-demo  (login: admin/admin)
    ```
 
-Optional Docker Install
------------------------
 
+Option 2 - Generate docker install
+----------------------------------
 The following steps can be used to configure and run the demo in a docker container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-ecm-demo/archive/master.zip)
@@ -98,7 +99,6 @@ Supporting Articles
 
 Released versions
 -----------------
-
 See the tagged releases for the following versions of the product:
 
 - v0.4 - JBoss BPM Suite 6.0.3 with optional docker installation.
