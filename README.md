@@ -94,6 +94,8 @@ then download and sign by adding your name, save it locally, and then upload it 
 
 Supporting Articles
 -------------------
+[3 shockingly easy ways into JBoss rules, events, planning & BPM](http://www.schabell.org/2015/01/3-shockingly-easy-ways-into-jboss-brms-bpmsuite.html)
+
 [Lightning brings Red Hat JBoss BPM Suite ECM telco CMIS integration demo](http://www.schabell.org/2014/07/lightning-strike-brings-redhat-jboss-bpmsuite-ecm-cmis-demo.html)
 
 
