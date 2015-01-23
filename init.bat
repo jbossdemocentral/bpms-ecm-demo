@@ -3,7 +3,7 @@ setlocal
 
 set PROJECT_HOME=%~dp0
 set DEMO=JBoss BPM Suite ECM Integration Demo
-set AUTHORS=Maciej Swiderski, Eric D. Schabell
+set AUTHORS=Maciej Swiderski, Andrew Block, Eric D. Schabell
 set PROJECT=git@github.com:jbossdemocentral/bpms-install-demo.git
 set PRODUCT=JBoss BPM Suite
 set JBOSS_HOME=%PROJECT_HOME%\target\jboss-eap-6.1
@@ -33,7 +33,7 @@ echo ##     ####  #     #     #    ###  ##### #####   #   #####     ##
 echo ##                                                             ##   
 echo ##                                                             ##   
 echo ##  brought to you by,                                         ##   
-echo ##             %AUTHORS%              ##
+echo ##           %AUTHORS%  ##
 echo ##                                                             ##   
 echo ##  %PROJECT%      ##
 echo ##                                                             ##   
