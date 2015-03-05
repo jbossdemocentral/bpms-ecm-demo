@@ -4,7 +4,7 @@
 
 Install options - local and Docker.",
   "author":"Maciej Swiderski, Andrew Block, Eric D. Schabell",
-  "categories":["brms","bpms"],
+  "categories":["bpms"],
   "level":"Easy Peasy",
   "published":true,
   "prerequisites":"Java 1.7",
