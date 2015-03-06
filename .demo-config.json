@@ -1,8 +1,6 @@
 {
   "name":"JBoss BPM Suite Enterprise Content Management (ECM) Demo",
-  "summary":"Project shows document integration with BPM, in a telco story of customer working with process to activate her mobile service by downloading a service contract document, signing it (update) and uploading the results back into the process. 
-
-Install options - local and Docker.",
+  "summary":"Project shows document integration with BPM, in a telco story of customer working with process to activate her mobile service by downloading a service contract document, signing it (update) and uploading the results back into the process. Install options - local and Docker.",
   "author":"Maciej Swiderski, Andrew Block, Eric D. Schabell",
   "categories":["bpms"],
   "level":"Easy Peasy",
