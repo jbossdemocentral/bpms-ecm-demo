@@ -88,6 +88,8 @@ Two options to start BPM Suite server:
    2. Document management via remote ECM system interface based on open standard CMIS through a [hosted Alfresco service](http://tinyurl.com/cmis-demo),
       login: admin/admin and you can see the document uploaded, view contents, and remember to remove it when done.
 
+   3. Claimed tasks that are not competed within a minute will be reassigned automatically back into the group for processing.
+
 Sample mobile service agreement (unsigned) is located in support/mobile-service-agreement.txt, use this as initial upload document, 
 then download and sign by adding your name, save it locally, and then upload it via the task form.
 
@@ -106,6 +108,8 @@ Supporting Articles
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v0.5 - JBoss BPM Suite 6.0.3 with automated task reassignment.
 
 - v0.4 - JBoss BPM Suite 6.0.3 with optional docker installation.
 
