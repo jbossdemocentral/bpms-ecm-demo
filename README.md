@@ -109,6 +109,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v0.6 - JBoss BPM Suite 6.1 with supporting document integration installed.
+
 - v0.5 - JBoss BPM Suite 6.0.3 with automated task reassignment.
 
 - v0.4 - JBoss BPM Suite 6.0.3 with optional docker installation.
