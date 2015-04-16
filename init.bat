@@ -6,15 +6,16 @@ set DEMO=JBoss BPM Suite ECM Integration Demo
 set AUTHORS=Maciej Swiderski, Andrew Block, Eric D. Schabell
 set PROJECT=git@github.com:jbossdemocentral/bpms-install-demo.git
 set PRODUCT=JBoss BPM Suite
-set JBOSS_HOME=%PROJECT_HOME%\target\jboss-eap-6.1
+set JBOSS_HOME=%PROJECT_HOME%\target\jboss-eap-6.4
 set SERVER_DIR=%JBOSS_HOME%\standalone\deployments\
 set SERVER_CONF=%JBOSS_HOME%\standalone\configuration\
 set SERVER_BIN=%JBOSS_HOME%\bin
 set SRC_DIR=%PROJECT_HOME%installs
 set SUPPORT_DIR=%PROJECT_HOME%support
 set PRJ_DIR=%PROJECT_HOME%projects
-set BPMS=jboss-bpms-installer-6.0.3.GA-redhat-1.jar
-set VERSION=6.0.3
+set BPMS=jboss-bpmsuite-6.1.0.GA-installer.jar
+set EAP=jboss-eap-6.4.0-installer.jar
+set VERSION=6.1
 
 REM wipe screen.
 cls
@@ -41,6 +42,16 @@ echo #################################################################
 echo.
 
 REM make some checks first before proceeding.	
+if exist %SRC_DIR%\%EAP% (
+        echo Product sources are present...
+        echo.
+) else (
+        echo Need to download %EAP% package from the Customer Support Portal
+        echo and place it in the %SRC_DIR% directory to proceed...
+        echo.
+        GOTO :EOF
+)
+
 if exist %SRC_DIR%\%BPMS% (
         echo Product sources are present...
         echo.
@@ -51,7 +62,7 @@ if exist %SRC_DIR%\%BPMS% (
         GOTO :EOF
 )
 
-REM Move the old JBoss instance, if it exists, to the OLD position.
+REM Remove the old JBoss instance, if it exists.
 if exist %JBOSS_HOME% (
         echo - existing JBoss product install detected and removed...
         echo.
@@ -59,7 +70,19 @@ if exist %JBOSS_HOME% (
  )
 
 REM Run installer.
-echo Product installer running now...
+echo EAP installer running now...
+echo.
+call java -jar %SRC_DIR%/%EAP% %SUPPORT_DIR%\installation-eap -variablefile %SUPPORT_DIR%\installation-eap.variables
+
+
+if not "%ERRORLEVEL%" == "0" (
+  echo.
+	echo Error Occurred During JBoss EAP Installation!
+	echo.
+	GOTO :EOF
+)
+
+echo BPM Suite installer running now...
 echo.
 call java -jar %SRC_DIR%/%BPMS% %SUPPORT_DIR%\installation-bpms -variablefile %SUPPORT_DIR%\installation-bpms.variables
 
@@ -79,6 +102,17 @@ echo - setting up standalone.xml configuration adjustments...
 echo.
 xcopy /Y /Q "%SUPPORT_DIR%\standalone.xml" "%SERVER_CONF%"
 echo.
+
+echo - setup email task notification users...
+echo.
+xcopy "%SUPPORT_DIR%\userinfo.properties" "%SERVER_DIR%\business-central.war\WEB-INF\classes\"
+
+REM build custom extension for ECM demo.
+mvn package -f "%PRJ_DIR%\brms-file-upload-cmis\pom.xml"
+
+echo.
+echo - adding file-uplaoding to business central...
+xcopy /Y /Q "%PRJ_DIR%\brms-file-upload-cmis\target\brms-file-upload-cmis-1.0.0.jar" "%SERVER_DIR%\business-central.war\WEB-INF\lib"
 
 echo.
 echo You can now start the %PRODUCT% with %SERVER_BIN%\standalone.bat

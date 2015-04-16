@@ -18,11 +18,11 @@ Option 1 - Install on your machine
 4. You have two options to run demo, using filesystem for document storage or CMIS interface over network:
 
    ```
-   $ ./target/jboss-eap-6.1/bin/standalone.sh
+   $ ./target/jboss-eap-6.4/bin/standalone.sh
   
    or 
 
-   $ ./target/jboss-eap-6.1/bin/standalone.sh -Dorg.jbpm.ecm.storage.type=opencmis
+   $ ./target/jboss-eap-6.4/bin/standalone.sh -Dorg.jbpm.ecm.storage.type=opencmis
    ```
 
 5. Login to http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)
@@ -108,6 +108,8 @@ Supporting Articles
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v0.6 - JBoss BPM Suite 6.1 with supporting document integration installed.
 
 - v0.5 - JBoss BPM Suite 6.0.3 with automated task reassignment.
 

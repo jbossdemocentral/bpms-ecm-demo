@@ -5,3 +5,9 @@
 	bare = true
 	logallrefupdates = false
 	precomposeunicode = true
+[remote "origin"]
+	url = file:///Users/erics/demo-projects/bpms/bpms-ecm-demo/support/bpm-suite-demo-niogit/telco.git
+	fetch = +refs/heads/*:refs/heads/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
