@@ -58,19 +58,19 @@ The following steps can be used to configure and run the demo in a docker contai
 5. You have two options to run demo, using filesystem for document storage or CMIS interface over network:
     
     ```
-	docker run --it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo
+	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo
     ```
     or
       
     ```
-	docker run --it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo -Dorg.jbpm.ecm.storage.type=opencmis
+	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo -Dorg.jbpm.ecm.storage.type=opencmis
     ```
-6. Login to http://<DOCKER_HOST>:8080/business-central  (u:erics / p:bpmsuite1!)
+6. Login to http://&lt;DOCKER_HOST&gt;:8080/business-central  (u:erics / p:bpmsuite1!)
 
     ```
    - build & deploy mobile service activation process
 
-   - start process, submit provided service agreement document from suport/mobile-service-agreement.txt
+   - start process, submit provided service agreement document from support/mobile-service-agreement.txt
 
    - at user task, form presented that allows user to download service agreement, edit & sign agreement, upload signed document to
      complet task.
