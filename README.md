@@ -4,7 +4,7 @@ Project to automate the installation of this product with ECM (document integrat
 customer working with process to activate her mobile service by downloading a service contract document, signing it (update), and
 uploading the results back into the process.
 
-There are two options available to you for using this demo; local and Docker.
+There are two options available to you for using this demo; local and containerized.
 
 
 Option 1 - Install on your machine
@@ -40,9 +40,9 @@ Option 1 - Install on your machine
    ```
 
 
-Option 2 - Generate docker install
-----------------------------------
-The following steps can be used to configure and run the demo in a docker container
+Option 2 - Generate containerized installation
+----------------------------------------------
+The following steps can be used to configure and run the demo in a container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-ecm-demo/archive/master.zip)
 
@@ -75,7 +75,7 @@ The following steps can be used to configure and run the demo in a docker contai
    - at user task, form presented that allows user to download service agreement, edit & sign agreement, upload signed document to
      complet task.
 
-   - view document stored either on filesystem in docker container using terminal used to launch container (/tmp/{date-time-stamp-dir}/mobile-service-agreement.txt) or on CMIS online storage
+   - view document stored either on filesystem in container using terminal used to launch container (/tmp/{date-time-stamp-dir}/mobile-service-agreement.txt) or on CMIS online storage
      at http://tinyurl.com/cmis-demo  (login: admin/admin)
      ```
 
@@ -113,7 +113,7 @@ See the tagged releases for the following versions of the product:
 
 - v0.5 - JBoss BPM Suite 6.0.3 with automated task reassignment.
 
-- v0.4 - JBoss BPM Suite 6.0.3 with optional docker installation.
+- v0.4 - JBoss BPM Suite 6.0.3 with optional containerized installation.
 
 - v0.3 - moved to JBoss Demo Central, with updated windows init.bat support.
 
