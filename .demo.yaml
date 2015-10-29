@@ -1,5 +1,5 @@
 id: jbossdemocentral-bpms-ecm
-title: Demo is a telco story of customer working with process to activate her mobile service by downloading a service contract document, signing it (update), and uploading the results back into the process.
+title: JBoss BPM Suite ECM Demo
 github_repo_url: https://github.com/jbossdemocentral/bpms-ecm-demo
 technologies:
   - JBoss EAP
