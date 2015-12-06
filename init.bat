@@ -135,7 +135,7 @@ echo.
 xcopy /Y /Q "%SUPPORT_DIR%\userinfo.properties" "%SERVER_DIR%\business-central.war\WEB-INF\classes\"
 
 REM build custom extension for ECM demo.
-mvn package -f "%PRJ_DIR%\brms-file-upload-cmis\pom.xml"
+call mvn package -f "%PRJ_DIR%\brms-file-upload-cmis\pom.xml"
 
 echo.
 echo - adding file-uplaoding to business central...
