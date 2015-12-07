@@ -111,6 +111,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v0.7 - JBoss BPM Suite 6.2.0, JBoss EAP 6.4.4 and supporting document integration installed.
+
 - v0.6 - JBoss BPM Suite 6.1 with supporting document integration installed.
 
 - v0.5 - JBoss BPM Suite 6.0.3 with automated task reassignment.
