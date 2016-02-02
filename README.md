@@ -55,15 +55,10 @@ The following steps can be used to configure and run the demo in a container
 	```
 	docker build -t jbossdemocentral/bpms-ecm-demo .
 	```
-5. You have two options to run demo, using filesystem for document storage or CMIS interface over network:
+5. You can run demo using filesystem for document storage:
     
     ```
 	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo
-    ```
-    or
-      
-    ```
-	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo -Dorg.jbpm.ecm.storage.type=opencmis
     ```
 6. Login to http://&lt;DOCKER_HOST&gt;:8080/business-central  (u:erics / p:bpmsuite1!)
 
@@ -75,8 +70,7 @@ The following steps can be used to configure and run the demo in a container
    - at user task, form presented that allows user to download service agreement, edit & sign agreement, upload signed document to
      complet task.
 
-   - view document stored either on filesystem in container using terminal used to launch container (/tmp/{date-time-stamp-dir}/mobile-service-agreement.txt) or on CMIS online storage
-     at http://tinyurl.com/cmis-demo  (login: admin/admin)
+   - view document stored on filesystem in container using terminal used to launch container (/tmp/{date-time-stamp-dir}/mobile-service-agreement.txt).
      ```
 
 Running demo
@@ -85,10 +79,7 @@ Two options to start BPM Suite server:
 
    1. Document management on local filesystem, found in /tmp/{timestamp-directories}/mobile-service-agreement.txt
 
-   2. Document management via remote ECM system interface based on open standard CMIS through a [hosted Alfresco service](http://tinyurl.com/cmis-demo),
-      login: admin/admin and you can see the document uploaded, view contents, and remember to remove it when done.
-
-   3. Claimed tasks that are not competed within a minute will be reassigned automatically back into the group for processing.
+   2. Claimed tasks that are not competed within a minute will be reassigned automatically back into the group for processing.
 
 Sample mobile service agreement (unsigned) is located in support/mobile-service-agreement.txt, use this as initial upload document, 
 then download and sign by adding your name, save it locally, and then upload it via the task form.
@@ -110,6 +101,8 @@ Supporting Articles
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v0.8 - JBoss BPM Suite 6.2.0, JBoss EAP 6.4.4 and supporting document integration installed, removed external CMIS example.
 
 - v0.7 - JBoss BPM Suite 6.2.0, JBoss EAP 6.4.4 and supporting document integration installed.
 

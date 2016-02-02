@@ -148,19 +148,11 @@ cp $PRJ_DIR/brms-file-upload-cmis/target/brms-file-upload-cmis-1.0.0.jar $SERVER
 #echo
 
 echo
-echo "Start $PRODUCT in one of two ways depending on usage:"
+echo "Start $PRODUCT:"
 echo
 echo "   1. Document stored on local filesystem in /tmp/{timestamp-directories}/mobile-serivce-agreement.txt"
 echo
 echo "               $ $SERVER_BIN/standalone.sh"
-echo
-echo "   2. Document is uploaded to and from Alfresco online CMIS service, start with a property:"
-echo
-echo "               $ $SERVER_BIN/standalone.sh -Dorg.jbpm.ecm.storage.type=opencmis"
-echo
-echo "The uploaded documents will be available in browser:"
-echo
-echo "               http://tinyurl.com/cmis-demo  (login: admin/admin)"
 echo
 echo "Login into business central at:"
 echo
