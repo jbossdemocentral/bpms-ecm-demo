@@ -48,19 +48,17 @@ The following steps can be used to configure and run the demo in a container
 
 2. Add product installer to installs directory.
 
-3. Copy contents of support/docker directory to the project root.
-
-4. Build demo image
+3. Build demo image
 
 	```
 	docker build -t jbossdemocentral/bpms-ecm-demo .
 	```
-5. You can run demo using filesystem for document storage:
+4. You can run demo using filesystem for document storage:
     
     ```
 	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-ecm-demo
     ```
-6. Login to http://&lt;DOCKER_HOST&gt;:8080/business-central  (u:erics / p:bpmsuite1!)
+5. Login to http://&lt;DOCKER_HOST&gt;:8080/business-central  (u:erics / p:bpmsuite1!)
 
     ```
    - build & deploy mobile service activation process
