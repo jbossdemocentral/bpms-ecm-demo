@@ -103,6 +103,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v0.9 - JBoss BPM Suite 6.2.0, JBoss EAP 6.4.4 and OSE aligned containerization.
+
 - v0.8 - JBoss BPM Suite 6.2.0, JBoss EAP 6.4.4 and supporting document integration installed, removed external CMIS example.
 
 - v0.7 - JBoss BPM Suite 6.2.0, JBoss EAP 6.4.4 and supporting document integration installed.
